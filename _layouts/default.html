@@ -1,91 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- web fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:400,600,700' rel='stylesheet' type='text/css'>
 
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">-->
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/skeleton/css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/skeleton/css/skeleton.css" />
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/skeleton/css/custom.css" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/skeleton/images/favicon.png">
+    <!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/skeleton/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/skeleton/css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/skeleton/css/custom.css" />
 
-</head>
-<body>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-  <!-- header -->
-  <header id="header-section" class="container" >
-    <div class="site-logo">
-      <a href="#"><img src="{{ site.baseurl }}/skeleton/images/ever-learning-logo-for-web.png" alt="Ever Learning logo"></a>
-    </div>
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now and Skeleton -->
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+  </head>
 
-    <!-- nav-->
-    <ul class="navbar">
-      <li><a href="#">Start here</a></li>
-      <li><a href="#">Academy</a></li>
-      <li><a href="#">Services</a></li>
-      <li><button class="button-primary lets-talk">Let's talk</button></li>
-    </ul>
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-  </header>
+          <div class="site-info">
+            <h1 class="site-name">{{ site.name }}</h1>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div style="margin-top: 60px; margin-bottom: 60px; text-align: center;">
-        <h1>Design engaging training.</h1>
+          </div>
+
+          <!--<nav>
+            <a href="{{ site.baseurl }}/">Blog</a>
+             / <a href="{{ site.baseurl }}/about">About</a>
+          </nav>-->
+        </header>
       </div>
     </div>
 
-    <div class="row big-rows">
-      <div class="offset-by-two eight columns u-centre">
-        <img src="{{ site.baseurl }}/skeleton/images/what-image.png">
-        <h2>Choose what to teach</h2>
-        <p>Align training with learners goals and the skills needed to achieve them.</p>
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <p></p>Words and pictures &copy; Blair Rorani 2015</p>
+        </footer>
       </div>
     </div>
-    <div class="row big-rows">
-      <div class="offset-by-two eight columns u-centre">
-        <img src="{{ site.baseurl }}/skeleton/images/how-image.png">
-        <h2>Choose how to teach</h2>
-        <p>Get learners attention and keep them in the <a href="">flow of learning</a> new skills.</p>
-      </div>
-    </div>
-    <div class="row big-rows">
-      <div class="offset-by-two eight columns u-centre">
-        <img src="{{ site.baseurl }}/skeleton/images/build-image.png">
-        <h2>Build and test</h2>
-        <p>Create prototypes of your training and get feedback from learners.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <script src="//use.typekit.net/nvb3qgk.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
-
-</body>
+    {% include analytics.html %}
+  </body>
 </html>

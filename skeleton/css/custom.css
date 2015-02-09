@@ -1,138 +1,160 @@
-/* CUSTOM CSS */
+/* custom rules */
 
-html {
-  font-size: 62.5%; }
-
-body {
-  line-height: 1.25;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-  line-height: 1;
-}
-
-@media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 3.6rem; letter-spacing: normal; }
-  h3 { font-size: 2.4rem; }
-  h4 { font-size: 1.5rem; }
-  h5 { font-size: 1.5rem; }
-  h6 { font-size: 1.5rem; }
-}
-
-p {
-  font-size: 1.7rem;
-}
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a:hover {
-    color: #222;
-    background: #f6ea50;
-    text-decoration: none;
-}
-
-
-/* header */
-#header-section {
-  top: 20px;
-}
-
-/* make header stretch across screen */
-#header-section.container {
-    width: 100%;
-    max-width: 90%;
-}
-
-/* site logo */
-.site-logo {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-  .site-logo img {
-    max-width: 150px;
-  }
-
-
-/* navbar */
-
-ul.navbar {
- text-align: center;
-}
-
-ul.navbar li{
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.lets-talk {
-  margin-top: 15px;
-  margin-right: 10px;
-}
-
-/* limit width of container */
 .container {
-  width: 90%;
   max-width: 680px;
 }
 
-.big-rows {
-  margin-bottom: 30px;
+.post {
+  margin-bottom: 120px;
 }
 
-/*---
-media queries
----*/
+/* --- */
 
-/* Larger than phablet */
-@media (min-width: 400px) {
-  ul.navbar {
-    float: right;
+body  {
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  border: 10px solid #c0392b;
+  color: #2c3e50;
+}
+
+h1, h2, h3 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+  @media (min-width: 550px) {
+    h1 {
+      font-size: 8rem;
+    }
   }
+
+h2 {
+  color: #f1c40f;
 }
 
-/* Larger than phablet (also point when grid becomes active) */
+li {
+  list-style-position: outside;
+}
+
+.posts p,
+.posts li {
+  font-size: 1.8rem;
+}
+
 @media (min-width: 550px) {
-  p {
-    font-size: 2rem;
-  }
-  .lets-talk {
-    margin-top: 0;
-    margin-right: 0;
+  .bigger p,
+  .bigger li {
+    font-size: 2.3rem;
   }
 }
 
-/* Larger than tablet */
-@media (min-width: 750px) {
-  .site-logo {
-    float: left;
+/* links */
+a:link, a:visited, a:active {
+  text-decoration: none;
+  border-bottom: 1px solid #bdc3c7;
+  color: #c0392b;
+}
+
+a:hover {
+  background: #F6D965;
+  border: none;
+  color: #222;
+}
+  a.site-avatar:hover {
+    background: none;
   }
-  .container {
-    width: 80%; }
+
+img {
+  max-width: 100%;
 }
 
-/* Larger than desktop */
-@media (min-width: 1000px) {
-
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
 }
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
-  .site-logo img {
-    max-width: 100%;
+/* masthead */
+
+.wrapper-masthead {
+  margin-bottom: 90px;
+  padding-top: 90px;
+}
+.wrapper-masthead a:link {
+  border-bottom: none;
+}
+  .wrapper-masthead h1 {
+    text-transform: uppercase;
   }
+/* avatar */
+
+.site-avatar {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  padding: 0 0 15px 0;
 }
 
-/* utility
----------- */
+  /*@media (min-width: 700px) {
+    .site-avatar {
+      float: left;
+      display: inline;
+      margin-right: 15px;
+    }
+  }*/
 
-.u-bg {
-  background: #eee;
+  .site-avatar img {
+    border-radius: 5%;
+  }
+
+/* site info */
+.site-info {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+  /*@media (min-width: 700px) {
+    .site-info {
+      float: left;
+      display: inline;
+      text-align: left;
+  }
+}*/
+
+/* nav */
+
+nav {
+  float: none;
+  margin-top: 9px;
+  display: block;
+  text-align: center;
+  border-top: 1px solid #bdc3c7;
+  border-bottom: 1px solid #bdc3c7;
+  padding: 10px 0;
+  font-size: 2rem;
 }
 
-.u-centre {
+  nav a {
+    margin: 0 10px;
+  }
+
+  /*@media (min-width: 700px) {
+    nav {
+      float: right;
+      display: inline;
+      margin-top: 23px;
+      text-align: left;
+    }*/
+
+
+/* footer */
+
+.footer {
   text-align: center;
 }
