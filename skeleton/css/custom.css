@@ -12,28 +12,45 @@
 
 body  {
   font-family: 'Montserrat', helvetica, arial, sans-serif;
-  border: 10px solid #c0392b;
   color: #2c3e50;
+  border-top: 10px solid #8B653F;
 }
 
-h1, h2, h3 {
-  font-family: 'Dosis', sans-serif;
-  font-weight: 600;
+h1, h2, h3, h4 {
+  font-family: 'Museo', sans-serif;
+  color: #27ae60;
 }
 
 h1 {
   font-size: 6rem;
+  font-weight: 700;
 }
 
   @media (min-width: 550px) {
     h1 {
       font-size: 8rem;
+      font-weight: 900;
     }
   }
 
 h2 {
-  color: #f1c40f;
+  font-weight: 500;
+  font-style: italic;
 }
+
+h3 {
+  font-weight: 500;
+  font-style: italic;
+}
+
+h4 {
+  font-weight: 500;
+  font-style: italic;
+  color: #8B653F;
+}
+
+
+/* lists */
 
 li {
   list-style-position: outside;
@@ -55,7 +72,7 @@ li {
 a:link, a:visited, a:active {
   text-decoration: none;
   border-bottom: 1px solid #bdc3c7;
-  color: #c0392b;
+  color: #f39c12;
 }
 
 a:hover {

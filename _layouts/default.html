@@ -38,14 +38,14 @@
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
           <div class="site-info">
-            <h1 class="site-name">{{ site.name }}</h1>
+            <!--<h1 class="site-name">{{ site.name }}</h1>-->
 
           </div>
 
-          <!--<nav>
+          <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
-             / <a href="{{ site.baseurl }}/about">About</a>
-          </nav>-->
+             / <a href="{{ site.baseurl }}/about">About</a> / <a href="#">Speaking and consulting</a>
+          </nav>
         </header>
       </div>
     </div>
@@ -57,11 +57,12 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          <p></p>Words and pictures &copy; Blair Rorani 2015</p>
+          <p></p>Words and pictures &copy; Rorani Holdings Pty Ltd 2015</p>
         </footer>
       </div>
     </div>
 
     {% include analytics.html %}
+    {% include typekit.html %}
   </body>
 </html>
